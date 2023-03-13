@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="/Frontend/css/navbar.css" />
+    <link rel="stylesheet" href="/Frontend/css/styles.css" />
+    <link rel="stylesheet" href="/Frontend/css/login.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/Frontend/Auth.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> 4Med. </a>
+
+      <nav class="navbar">
+        <a href="/Frontend/home.html">Home</a>
+        <a href="/Frontend/signup.html">Signup</a>
+        <a href="/Frontend/login.html">Login</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+
+    <div class="container">
+      <div class="login">
+        <form
+          id="login-form"
+          >
+          <h1>Login</h1>
+          <hr />
+          <p>Explore the World!</p>
+          <label>Email</label>
+          <input
+            type="text"
+            placeholder="abc@exampl.com"
+            name="username"
+            id="username" />
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="enter your password!"
+            name="password"
+            id="password" />
+          <button type="submit" id="submit-btn">Login</button>
+          <p>
+            <a href="/Frontend/signup.html">Dont have account Register?</a>
+          </p>
+          <closeform></closeform>
+        </form>
+      </div>
+      <div class="pic">
+        <img src="/Frontend/img/doctor_consultation_02.jpg" />;
+      </div>
+    </div>
+  </body>
+</html>

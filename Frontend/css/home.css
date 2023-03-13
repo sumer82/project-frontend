@@ -1,0 +1,175 @@
+.pose
+{
+	position: absolute;
+	width: 704px;
+	height: 896px;
+	left: 975px;
+	top:65px;
+}
+.frame
+{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1px 0px;
+	gap: 60px;
+	
+	position: absolute;
+	width: 810px;
+	height: 451px;
+	left: 200px;
+	top: 194px;
+}
+.title1
+{
+	width: 810px;
+	height: 84px;
+	
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 80px;
+	line-height: 84px;
+	
+	color:#3D3D3E;
+	
+	
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.title2
+{
+	width: 810px;
+	height: 84px;
+	
+	font-family: 'Plus Jakarta Sans';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 60px;
+	line-height: 84px;
+	
+	color:#2D89FF;
+	
+	
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.quote
+{
+	width: 581px;
+height: 38px;
+
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 85px;
+
+
+color: #737373;
+
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.frame5
+{
+width: 488px;
+height: 207px;
+
+border-radius: 35px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+}
+.frame52
+{
+	/* Frame 52 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 10px;
+
+position: absolute;
+width: 418px;
+height: 167px;
+left: 20px;
+top: 20px;
+}
+.rect22
+{
+	box-sizing: border-box;
+
+position: absolute;
+left: 0%;
+right:45%;
+top: 86.53%;
+bottom:-17.14%;
+
+background: rgba(45, 137, 255, 0.11);
+backdrop-filter: blur(5px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 35px;
+}
+.fill
+{
+position: absolute;
+left: 4%;
+right: 26.68%;
+top: 91.94%;
+bottom: 32.67%;
+
+}
+.point1
+{
+	/* Free, yes completely free */
+
+
+width: 304px;
+height: 49px;
+position:absolute;
+font-family: 'Plus Jakarta Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 15px;
+line-height: 65px;
+/* identical to box height, or 175% */
+margin-left:56px;
+
+color: #565656;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.asset1
+{
+
+width: 104.7px;
+height: 96.72px;
+margin-left: 403px;
+margin-top: -36px;
+}
+.asset2
+{
+
+width: 104.7px;
+height: 96.72px;
+margin-left: -49px;
+margin-top: 28px;
+}

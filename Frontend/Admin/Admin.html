@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/Frontend/css/DashboardStyle.css" />
+    <link rel="stylesheet" href="/Frontend/css/reg.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="/Frontend/Doctor/script.js"></script>
+    <title>HealthBridge</title>
+  </head>
+  <body >
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <i class='bx bx-plus-medical'></i>
+        <span class="text">HealthBridge</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="#main">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+       
+        <li>
+          <a href="#Appointment">
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <span class="text">My Appointments</span>
+          </a>
+        </li>
+        
+        <li class="add_sch">
+          <a href="#Schedule">
+            <i class="bx bxs-message-dots"></i>
+            <span class="text">Schedule</span>
+          </a>
+        </li>
+        
+      </ul>
+      <ul class="side-menu">
+       <li>
+         <a href="#" >
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download Report</span>
+          </a>
+       </li>
+        
+        <li>
+          <a href="#" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+      
+        <input type="checkbox" id="switch-mode" hidden />
+        <label for="switch-mode" class="switch-mode"></label>
+        <a href="#" class="profile">
+          <img src="img/people.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main id="main">
+        <div class="head-title">
+          <div class="left">
+            <h1 id="name">Welcome <span id="doc_name"></span></h1>
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Home</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="btn-download">
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download PDF</span>
+          </a>
+        </div>
+
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3 id="apt_count">0</h3>
+              <p>Appointments</p>
+            </span>
+          </li>
+          <li>
+            <i class='bx bxs-hourglass-top'></i> 
+            <span class="text">
+              <h3 id="stat">0</h3>
+              <p>Pending Appointment</p>
+            </span>
+          </li>
+          <li>
+            <i class='bx bx-line-chart'></i>
+            <span class="text">
+              <h3 id="effi">0%</h3>
+              <p>Efficiency</p>
+            </span>
+          </li>
+        </ul>
+
+        <div class="table-data">
+          <div class="order" id="Appointment">
+            <div class="head">
+              <h3>Your Appointments</h3>
+              <input type="date" id="date" value="today" style="cursor: pointer;">
+              <i class="bx bx-search" id="apt_search"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <div class="loader"></div>
+            <!-- <div class="table"> -->
+            <table id="apt_table" >
+              <thead>
+                <tr>
+                  <th>Pateint Name</th>
+                  <th>Date</th>
+                  <th>Symptoms</th>
+                  <th>Status</th>
+                  <th>view</th>
+                </tr>
+              </thead>
+              
+              <tbody >
+                 <tr>
+                  <td>
+                    <p>NAME</p>
+                  </td>
+                  <td>Date</td>
+                  <td>symptoms</td>
+                  <td><span class="status completed">status</span></td>
+                  <td>
+                    <button class="status completed " id="open-form"  >
+                      <i class="bx bx-show"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="todo" id="Schedule">
+            <div class="head">
+              <h3>Today's Schedule</h3>
+              <i class="bx bx-plus" id="add_sch"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <ul class="todo-list">
+              <li class="completed">
+                <i class="bx bx-time"></i>
+                <p>Schedule start</p>
+                <p>9:00 am</p>
+              </li> <ul id="sch"></ul>
+              
+              <li class="completed">
+                <i class="bx bx-time-five"></i>
+                <p>Schedule end</p>
+                <p>5:00 pm</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- togle form -->
+
+        
+    <div class="container" id="myForm">
+    <div class="title">
+      Doctor's Comment
+      <i class='bx bx-x' id="close-form"></i>
+    </div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Patient id</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+           <div class="input-box">
+            <span class="details">Doctor id</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+           <div class="textarea">
+            <span class="details">Your Comment</span>
+            <textarea name="prescription" id="presc" cols="30" rows="10" required="required"></textarea>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Save">
+        </div>
+      </form>
+    </div>
+  </div>
+
+   <div class="container" id="sch_form">
+    <div class="title">
+      Schedule
+      <i class='bx bx-x' id="close_sch"></i>
+    </div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Doctor Id</span>
+            <input type="text" placeholder="Doc_id" readonly>
+          </div>
+          <div class="input-box">
+            <span class="details">Day of Week</span>
+            <input type="date" placeholder="Day" required>
+          </div>
+           <div class="input-box">
+            <span class="details">Start Time</span>
+            <input type="text" placeholder="Enter start time" required>
+          </div>
+          <div class="input-box">
+            <span class="details">End Time</span>
+            <input type="text" placeholder="Enter End time" required>
+          </div>
+          
+        </div>
+        <div class="button">
+          <input type="submit" value="Save">
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- appointment filter search form  -->
+  
+       
+       
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+   
+  </body>
+</html>
